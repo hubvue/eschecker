@@ -1,4 +1,4 @@
-name: CI
+name: Rust-CI
 env:
   DEBUG: napi:*
   APP_NAME: core
@@ -478,7 +478,7 @@ jobs:
       - name: Move artifacts
         run: yarn artifacts
       - name: List packages
-        run: ls -r packages/**/npm
+        run: ls -R packages/**/npm
         shell: bash
       - name: Publish
         run: |
