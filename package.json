@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava",
+    "artifacts": "yarn workspaces foreach --no-private run artifacts",
+    "build": "yarn workspaces foreach --no-private -j 1 run build",
+    "build:workspace": ""
   },
   "keywords": [],
   "author": "",

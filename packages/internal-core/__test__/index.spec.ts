@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, eschecker } from '../internal-core/index.js'
+import { sum, eschecker } from '../index'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
