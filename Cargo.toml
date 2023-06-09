@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "./packages/internal-core"
+]
+
+[profile.release]
