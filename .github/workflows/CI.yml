@@ -478,7 +478,7 @@ jobs:
       - name: Move artifacts
         run: yarn artifacts
       - name: List packages
-        run: ls -R ./npm
+        run: ls -r packages/**/npm
         shell: bash
       - name: Publish
         run: |
