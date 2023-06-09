@@ -49,11 +49,6 @@ jobs:
           - host: macos-latest
             target: aarch64-apple-darwin
             build: |
-              sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*;
-              export CC=$(xcrun -f clang);
-              export CXX=$(xcrun -f clang++);
-              SYSROOT=$(xcrun --sdk macosx --show-sdk-path);
-              export CFLAGS="-isysroot $SYSROOT -isystem $SYSROOT";
               yarn build --target aarch64-apple-darwin
               strip -x packages/*/*.node
           - host: ubuntu-latest
@@ -187,7 +182,7 @@ jobs:
             freebsd-version
             yarn install
             yarn build
-            strip -x *.node
+            strip -x packages/*/*.node
             yarn test
             rm -rf node_modules
             rm -rf target
@@ -228,6 +223,9 @@ jobs:
         with:
           name: bindings-${{ matrix.settings.target }}
           path: artifacts
+      - name: Move artifacts
+        run: yarn artifacts
+        shell: bash
       - name: List packages
         run: ls -R .
         shell: bash
