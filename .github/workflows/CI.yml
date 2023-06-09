@@ -258,6 +258,9 @@ jobs:
         with:
           name: bindings-x86_64-unknown-linux-gnu
           path: .
+      - name: Move artifacts
+        run: yarn artifacts
+        shell: bash
       - name: List packages
         run: ls -R .
         shell: bash
@@ -292,6 +295,9 @@ jobs:
         with:
           name: bindings-x86_64-unknown-linux-musl
           path: .
+      - name: Move artifacts
+        run: yarn artifacts
+        shell: bash
       - name: List packages
         run: ls -R .
         shell: bash
@@ -316,6 +322,9 @@ jobs:
         with:
           name: bindings-aarch64-unknown-linux-gnu
           path: .
+      - name: Move artifacts
+        run: yarn artifacts
+        shell: bash
       - name: List packages
         run: ls -R .
         shell: bash
@@ -350,6 +359,9 @@ jobs:
         with:
           name: bindings-aarch64-unknown-linux-musl
           path: .
+      - name: Move artifacts
+        run: yarn artifacts
+        shell: bash
       - name: List packages
         run: ls -R .
         shell: bash
@@ -390,6 +402,9 @@ jobs:
         with:
           name: bindings-armv7-unknown-linux-gnueabihf
           path: .
+      - name: Move artifacts
+        run: yarn artifacts
+        shell: bash
       - name: List packages
         run: ls -R .
         shell: bash

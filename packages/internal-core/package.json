@@ -24,7 +24,7 @@
     "node": ">= 10"
   },
   "scripts": {
-    "artifacts": "napi artifacts",
+    "artifacts": "napi artifacts -d ../../artifacts",
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
     "prepublishOnly": "napi prepublish -t npm",
