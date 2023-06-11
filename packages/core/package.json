@@ -1,0 +1,16 @@
+{
+  "name": "@eschecker/core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "publish": "npm publish --access public"
+  },
+  "dependencies": {
+    "@eschecker/internal-core": "workspace:*"
+  }
+}
