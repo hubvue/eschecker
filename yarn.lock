@@ -1399,7 +1399,7 @@ __metadata:
     ava: ^5.3.0
     bumpp: ^9.1.1
     chalk: ^5.2.0
-    esmo: ^0.16.3
+    esno: ^0.16.3
     inquirer: ^9.2.7
     minimist: ^1.2.8
     tsup: ^6.7.0
@@ -1407,14 +1407,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"esmo@npm:^0.16.3":
+"esno@npm:^0.16.3":
   version: 0.16.3
-  resolution: "esmo@npm:0.16.3"
+  resolution: "esno@npm:0.16.3"
   dependencies:
     tsx: ^3.2.1
   bin:
     esno: esno.js
-  checksum: 949cb916ed7a77c0b21212da0c833037e56798a37bf3fa9bf9b4fe8aea503ed39719f26edd8aac80ee500af0184dd8c7933ba35ef5c8a03da523376012676aea
+  checksum: 47150dd0e86328755f3c65a5aa78325716689b66522b0387aa80de34443db8333f52bf1dc78d2810b01cfa294d5d877e76e3968a19998e38532272d4f5fc5d19
   languageName: node
   linkType: hard
 

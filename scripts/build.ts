@@ -12,9 +12,8 @@ const getPackagesName = async () => {
   const packagesName: string[] = []
   for (const pkgName of allPackagesName) {
     const isHiddenFile = /^\./g.test(pkgName)
-    const pkg = await import(resolve(
-      `packages/${pkgName}/package.json`
-    ))
+    const pkgPath = resolve(`packages/${pkgName}/package.json`)
+    const pkg = await import(pkgPath)
 
     if (!isHiddenFile && !pkg.private && !pkg.internal) {
       packagesName.push(pkgName)
