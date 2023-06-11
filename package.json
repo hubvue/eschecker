@@ -8,12 +8,13 @@
     "packages/*"
   ],
   "scripts": {
-    "artifacts": "yarn workspace @eschecker/internal-core artifacts",
-    "build": "yarn workspace @eschecker/internal-core build",
+    "artifacts": "pnpm -r --filter=internal-core run artifacts",
+    "build:rs": "pnpm -r --filter=internal-core run build",
     "build:package": "esno ./scripts/build.ts",
     "build:packages": "esno ./scripts/build.ts --all",
     "ci": "bumpp package.json packages/*/package.json --commit --push --tag",
     "publish:ts": "pnpm -r --filter=!internal-core publish --access public --no-git-checks",
+    "publish:rs": "pnpm -r --filter=internal-core publish --access public --no-git-checks",
     "test": "ava"
   },
   "keywords": [],
