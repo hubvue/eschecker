@@ -25,7 +25,8 @@ jobs:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.TOKEN}}
       - name: Build
         run: yarn build:packages
-        
+      - name: List packages
+        run: ls -R packages
       - name: Publish
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc

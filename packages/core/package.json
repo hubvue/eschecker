@@ -12,6 +12,12 @@
     }
   },
   "license": "MIT",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
     "node": ">= 10"
   },
