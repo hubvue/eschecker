@@ -1,2 +1,2 @@
 # eschecker
-Different versions of ECMAScript are compatible with the pre-release checker.
+Different versions of the ECMAScript syntax checker.
