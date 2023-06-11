@@ -3,6 +3,7 @@
   "version": "0.0.2-beta.1",
   "main": "index.js",
   "types": "index.d.ts",
+  "internal": true,
   "napi": {
     "name": "core",
     "triples": {
@@ -27,7 +28,7 @@
     "artifacts": "napi artifacts -d ../../artifacts",
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
-    "publish": "npm publish --access public",
+    "release": "npm publish --access public",
     "prepublishOnly": "napi prepublish -t npm",
     "universal": "napi universal",
     "version": "napi version"
