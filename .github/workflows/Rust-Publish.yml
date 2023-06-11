@@ -1,4 +1,4 @@
-name: Rust-CI
+name: Rust-Publish
 env:
   DEBUG: napi:*
   APP_NAME: core

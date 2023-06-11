@@ -1,5 +1,5 @@
 {
-  "name": "@eschecker/core-win32-arm64-msvc",
+  "name": "@eschecker/internal-core-win32-arm64-msvc",
   "version": "0.0.1",
   "os": [
     "win32"

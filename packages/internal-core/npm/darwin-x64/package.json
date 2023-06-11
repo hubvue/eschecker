@@ -1,5 +1,5 @@
 {
-  "name": "@eschecker/core-darwin-x64",
+  "name": "@eschecker/internal-core-darwin-x64",
   "version": "0.0.1",
   "os": [
     "darwin"
