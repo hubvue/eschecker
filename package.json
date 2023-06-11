@@ -9,9 +9,9 @@
   "scripts": {
     "artifacts": "yarn workspace @eschecker/internal-core artifacts",
     "build": "yarn workspace @eschecker/internal-core build",
-    "build:packages": "esmo ./scripts/build.ts",
+    "build:package": "esmo ./scripts/build.ts",
+    "build:packages": "esmo ./scripts/build.ts --all",
     "ci": "bumpp package.json packages/*/package.json --commit --push --tag",
-    "build:workspace": "",
     "test": "ava"
   },
   "keywords": [],

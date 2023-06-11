@@ -63,18 +63,27 @@ const getAnswersFromInquirer = async (packagesName) => {
   return packages
 }
 const packageOtherConfig = {
-  json2type: {
-    external: ['go-wasmer'],
+  core: {
+    external: ['@eschecher/internal-core'],
   },
 }
 const generateBuildConfigs = (packagesName: string[]): Options[] => {
   return packagesName.map(name => {
     return {
       name,
-      target: 'node14',
+      target: 'node16',
       entry: [`packages/${name}/src/index.ts`],
       outDir: `packages/${name}/dist`,
       format: ['cjs', 'esm'],
+      outExtension: (res) => {
+        let js = '.js'
+        if (res.format === 'cjs') {
+          js = '.cjs'
+        }
+        return {
+          js
+        }
+      },
       dts: true,
       replaceNodeEnv: true,
       splitting: false,
@@ -82,7 +91,7 @@ const generateBuildConfigs = (packagesName: string[]): Options[] => {
       shims: false,
       minify: true,
       tsconfig: resolve('tsconfig.json'),
-      ...packageOtherConfig[name]
+      external: ['@eschecker/internal-core'],
     }
   })
 }
@@ -114,8 +123,8 @@ const buildBootstrap = async () => {
     }
     buildPackagesName = answers
   }
-  // const packagesBuildConfig = generateBuildConfigs(buildPackagesName)
-  // await build(packagesBuildConfig)
+  const packagesBuildConfig = generateBuildConfigs(buildPackagesName)
+  await build(packagesBuildConfig)
 }
 
 buildBootstrap().catch((err) => {

@@ -1,8 +1,16 @@
 {
   "name": "@eschecker/core",
   "version": "0.0.2-beta.2",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "license": "MIT",
   "engines": {
     "node": ">= 10"
