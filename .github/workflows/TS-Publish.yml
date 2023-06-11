@@ -30,6 +30,8 @@ jobs:
       - name: Build
         run: pnpm build:packages
       - name: Publish
-        run: pnpm -r --filter=!internal-core publish --access public --no-git-checks
+        run: |
+          pnpm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          pnpm run publish:ts
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
