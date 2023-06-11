@@ -30,6 +30,6 @@ jobs:
       - name: Build
         run: pnpm build:packages
       - name: Publish
-        run: pnpm run publish:ts
+        run: pnpm -r --filter=!internal-core publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

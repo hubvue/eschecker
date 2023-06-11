@@ -21,9 +21,6 @@
   "engines": {
     "node": ">= 10"
   },
-  "scripts": {
-    "release": "npm publish --access public"
-  },
   "dependencies": {
     "@eschecker/internal-core": "workspace:^"
   }
