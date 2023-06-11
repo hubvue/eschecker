@@ -1,6 +1,6 @@
 {
   "name": "eschecker",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.0",
   "description": "",
   "main": "index.js",
   "workspaces": [
@@ -9,7 +9,7 @@
   "scripts": {
     "artifacts": "yarn workspace @eschecker/internal-core artifacts",
     "build": "yarn workspace @eschecker/internal-core build",
-    "version": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "ci": "bumpp package.json packages/*/package.json --commit --push --tag",
     "build:workspace": "",
     "test": "ava"
   },
