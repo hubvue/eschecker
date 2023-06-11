@@ -23,9 +23,6 @@ jobs:
         continue-on-error: true
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.TOKEN}}
-      - name: Install Dependencies
-        run: yarn install
-      
       - name: Build
         run: yarn build:packages
         
