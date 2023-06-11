@@ -11,6 +11,7 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "author": "hubvue",
   "license": "MIT",
   "files": [
     "dist"

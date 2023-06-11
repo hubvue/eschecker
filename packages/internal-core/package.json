@@ -20,6 +20,7 @@
       ]
     }
   },
+  "author": "hubvue",
   "license": "MIT",
   "files": [
     "index.js",
