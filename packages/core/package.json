@@ -1,6 +1,6 @@
 {
   "name": "@eschecker/core",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "MIT",
