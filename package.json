@@ -1,6 +1,6 @@
 {
   "name": "@eschecker/monorepo",
-  "version": "0.0.2-beta.35",
+  "version": "0.0.2-beta.36",
   "description": "Different versions of the ECMAScript syntax checker.",
   "private": "true",
   "main": "index.js",
