@@ -27,6 +27,8 @@ jobs:
         run: yarn build:packages
         
       - name: Publish
-        run: yarn workspaces foreach -p --exclude internal-core run release
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          yarn workspaces foreach -p --exclude @eschecker/internal-core run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
