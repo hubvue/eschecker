@@ -5,7 +5,15 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@eschecker/internal-core@workspace:packages/internal-core":
+"@eschecker/core@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@eschecker/core@workspace:packages/core"
+  dependencies:
+    "@eschecker/internal-core": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@eschecker/internal-core@workspace:*, @eschecker/internal-core@workspace:packages/internal-core":
   version: 0.0.0-use.local
   resolution: "@eschecker/internal-core@workspace:packages/internal-core"
   languageName: unknown
