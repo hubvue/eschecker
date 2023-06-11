@@ -1,27 +1,5 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "sourceMap": false,
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node16",
-    "allowJs": false,
-    "strict": true,
-    "noUnusedLocals": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "removeComments": true,
-    "jsx": "preserve",
-    "lib": ["esnext", "dom"],
-    "types": ["node"],
-    "rootDir": ".",
-    "declaration": true,
-    "paths": {
-      "@eschecker/*": ["packages/*/src"]
-    },
-  },
+  "extends": "./tsconfig.base.json",
   "include": ["packages/*/src/"],
   "exclude": ["packages/*/dist", "packages/*/__test__"]
 }
