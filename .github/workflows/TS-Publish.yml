@@ -33,6 +33,6 @@ jobs:
         run: ls -R packages
       - name: Publish
         run: |
-          pnpm -r --filter !internal-code publish --access public --no-git-checks 
+          pnpm -r --filter !@eschecker/internal-code publish --access public --no-git-checks 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
