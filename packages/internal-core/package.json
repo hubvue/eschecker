@@ -1,6 +1,6 @@
 {
   "name": "@eschecker/internal-core",
-  "version": "0.0.2-beta.16",
+  "version": "0.0.2-beta.17",
   "main": "index.js",
   "types": "index.d.ts",
   "internal": true,
