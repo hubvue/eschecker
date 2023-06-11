@@ -13,10 +13,7 @@
   },
   "license": "MIT",
   "files": [
-    "dist",
-    "package.json",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
   "engines": {
     "node": ">= 10"

@@ -21,6 +21,10 @@
     }
   },
   "license": "MIT",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "engines": {
     "node": ">= 10"
   },
@@ -28,7 +32,6 @@
     "artifacts": "napi artifacts -d ../../artifacts",
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
-    "release": "npm publish --access public",
     "prepublishOnly": "napi prepublish -t npm",
     "universal": "napi universal",
     "version": "napi version"
