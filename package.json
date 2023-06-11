@@ -12,6 +12,7 @@
     "build:package": "esno ./scripts/build.ts",
     "build:packages": "esno ./scripts/build.ts --all",
     "ci": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "t": "yarn workspaces foreach -p --exclude internal-core run release",
     "test": "ava"
   },
   "keywords": [],

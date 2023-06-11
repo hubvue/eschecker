@@ -30,6 +30,6 @@ jobs:
         run: yarn build:packages
         
       - name: Publish
-        run: yarn workspaces foreach -p run release --exclude internal-core
+        run: yarn workspaces foreach -p --exclude internal-core run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
