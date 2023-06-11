@@ -178,6 +178,7 @@ jobs:
             freebsd-version
             pnpm install
             pnpm build:rs
+            ls -R .
             strip -x packages/*/*.node
             pnpm test
             rm -rf node_modules
