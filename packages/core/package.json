@@ -15,6 +15,20 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "eschecher",
+    "ecma",
+    "syntax"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hubvue/eschecker.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/hubvue/eschecker/issues"
+  },
+  "homepage": "https://github.com/hubvue/eschecker/tree/main#readme",
   "engines": {
     "node": ">= 10"
   },
