@@ -19,6 +19,6 @@
     "release": "npm publish --access public"
   },
   "dependencies": {
-    "@eschecker/internal-core": "workspace:*"
+    "@eschecker/internal-core": "workspace:^"
   }
 }
