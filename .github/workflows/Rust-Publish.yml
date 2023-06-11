@@ -110,7 +110,7 @@ jobs:
         shell: bash
       - name: Setup node x86
         if: matrix.settings.target == 'i686-pc-windows-msvc'
-        run: pnpm config set supportedArchitectures.cpu "ia32"
+        run: npm config set supportedArchitectures.cpu "ia32"
         shell: bash
       - name: Install dependencies
         run: pnpm install
@@ -160,6 +160,7 @@ jobs:
             pkg install -y -f curl node libnghttp2
             curl -qL https://www.npmjs.com/install.sh | sh
             npm install --location=global --ignore-scripts pnpm
+            pnpm config set store-dir ~/pnpm 
             curl https://sh.rustup.rs -sSf --output rustup.sh
             sh rustup.sh -y --profile minimal --default-toolchain beta
             export PATH="/usr/local/cargo/bin:$PATH"
@@ -183,7 +184,6 @@ jobs:
             pnpm test
             rm -rf node_modules
             rm -rf target
-            rm -rf .pnpm/cache
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
