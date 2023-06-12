@@ -252,8 +252,6 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { Source, Config, eschecker } = nativeBinding
+const { eschecker } = nativeBinding
 
-module.exports.Source = Source
-module.exports.Config = Config
 module.exports.eschecker = eschecker
