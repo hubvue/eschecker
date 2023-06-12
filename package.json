@@ -1,6 +1,6 @@
 {
   "name": "@eschecker/monorepo",
-  "version": "0.0.2-beta.36",
+  "version": "0.0.2-beta.37",
   "description": "Different versions of the ECMAScript syntax checker.",
   "private": "true",
   "main": "index.js",
@@ -9,12 +9,14 @@
   ],
   "scripts": {
     "artifacts": "pnpm -r --filter=internal-core run artifacts",
+    "build": "run-p build:rs build:packages",
     "build:rs": "pnpm -r --filter=internal-core run build",
     "build:package": "esno ./scripts/build.ts",
     "build:packages": "esno ./scripts/build.ts --all",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag",
     "publish:ts": "pnpm -r --filter=!internal-core publish --access public --no-git-checks",
     "publish:rs": "pnpm -r --filter=internal-core publish --access public --no-git-checks",
+    "ci": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "release": "run-s build test ci",
     "test": "ava"
   },
   "keywords": [
@@ -35,6 +37,7 @@
     "esno": "^0.16.3",
     "inquirer": "^9.2.7",
     "minimist": "^1.2.8",
+    "npm-run-all": "^4.1.5",
     "tsup": "^6.7.0",
     "typescript": "^5.1.3"
   }
