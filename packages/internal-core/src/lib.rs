@@ -8,11 +8,6 @@ use std::collections::HashMap;
 use napi::{bindgen_prelude::*, JsUnknown, Result};
 
 #[napi]
-pub fn sum(a: i32, b: i32) -> i32 {
-  a + b
-}
-
-#[napi]
 #[derive(Debug)]
 pub struct Source {
   pub path: Option<String>,

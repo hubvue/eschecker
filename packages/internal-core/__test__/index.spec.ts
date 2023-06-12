@@ -1,17 +1,8 @@
 import test from 'ava'
 
-import { sum, eschecker } from '../index'
-
-test('sum from native', (t) => {
-  t.is(sum(1, 2), 3)
-})
-
+import { eschecker } from '../index'
 
 test('test', (t) => {
-  const foo = () => {
-    console.log('foo fn')
-    return 123
-  }
 
   const source = {
     path: './index.js',
