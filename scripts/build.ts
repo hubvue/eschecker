@@ -112,7 +112,6 @@ const build = async (packagesConfig: Options[]) => {
 
 const buildBootstrap = async () => {
   const packagesName = await getPackagesName()
-  console.log('buildBootstrap', packagesName)
   let buildPackagesName = packagesName
   if (!args.all) {
     packagesName.unshift('all')

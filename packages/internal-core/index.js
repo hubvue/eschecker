@@ -252,7 +252,9 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { sum, eschecker } = nativeBinding
+const { sum, Source, Config, eschecker } = nativeBinding
 
 module.exports.sum = sum
+module.exports.Source = Source
+module.exports.Config = Config
 module.exports.eschecker = eschecker

@@ -12,6 +12,16 @@ test('test', (t) => {
     console.log('foo fn')
     return 123
   }
-  const res = eschecker([foo], {})
-  t.is(res, 123)
+
+  const source = {
+    path: './index.js',
+    content: 'function foo(a, b) {}'
+  }
+  const res = eschecker([source], {
+    esVersion: 6,
+    rules: {
+      'FunctionDeclaration': 'FunctionDeclaration'
+    }
+  })
+  t.is(res, null)
 })
